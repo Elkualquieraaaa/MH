@@ -34,7 +34,7 @@ public class Bullet : MonoBehaviour
         this.gameObject.SetActive(false);
         if (collision.gameObject.CompareTag("Destruible"))
         {
-            collision.gameObject.SetActive(false);
+            collision.gameObject.GetComponent<Enemycontroller>().Die();
         }
     }
 }
